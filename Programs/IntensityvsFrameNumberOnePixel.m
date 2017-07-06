@@ -6,7 +6,7 @@ function IntensityvsFrameNumberOnePixel(filebase,X,Y)
     
 filename = [filebase '.cine'];
 %Stores info about the video in an "info" class. Access with
-%"info.NumFrames", etc.
+%"info.NumFrames", etc..
 info = cineInfo(filename);
 N = info.NumFrames;
 frames = 1:N;

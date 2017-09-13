@@ -80,7 +80,11 @@ for i=1:N
 end
 
 % Create AVI file.
-movie2avi(mov, [filebase '.avi'], 'compression', 'None', 'fps', 25);
+v = VideoWriter([filebase '.avi'],'Uncompressed AVI');
+v.FrameRate = 25;
+open(v);
+writeVideo(v,mov);
+close(v);
 %==========================================================================
 
 end
